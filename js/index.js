@@ -13,49 +13,20 @@ $.ajax({
 	headers: { 'Api-User-Agent': 'Example/1.0' },
 	dataType: "json",
 	success: function(data) {
-		// do something with the data
-		console.log(data);
-		// creating  objects for saving my data 
-		var myData = {
-			name : data[1][0],
-			description : data[2][0],
-			a : data[3][0]
-		};
+		// console.log(data); 
+		var html = "";
+		// Looping through the array and then displaying data
+		for(i=0; i < data[1].length; i++){
+		html += "<a href="+data[3][i]+" target='_blank'>"+ data[1][i]+"</br>"+ data[2][i]+"<br><br></a>";
+		}
+		$('#content').html(html);
+	}, 
 
-		var myDataTwo = {
-			name : data[1][1],
-			description : data[2][1],
-			a : data[3][1]
-		};
-
-		var myDataThree = {
-			name : data[1][2],
-			description : data[2][3],
-			a : data[3][2]
-		};
-
-		var myDataFour = {
-			name : data[1][3],
-			description : data[2][4],
-			a : data[3][3]
-		};
-
-
-		// displaying content
-
-		$('#content').html('<h1>' + myData.name + '</h1>' + '<br>' + '<p>'+ myData.description + '</p>' + '<br>' + '<a href=' + myData.a +' target="_blank" >Read more on Wikipedia</a>' );
-		$('#content2').html('<h1>' + myDataTwo.name + '</h1>' + '<br>' + '<p>' + myDataTwo.description + '</p>' + '<br>' + '<a href=' + myDataTwo.a +' target="_blank">Read more on Wikipedia</a>' );
-		$('#content3').html('<h1>' + myDataThree.name + '</h1>' + '<br>' + '<p>' +myDataThree.description + '</p>' + '<br>' + '<a href=' + myDataThree.a +' target="_blank">Read more on Wikipedia</a>' );
-		$('#content4').html('<h1>' + myDataFour.name + '</h1>' + '<br>' + '<p>' +myDataFour.description + '</p>' + '<br>' + '<a href=' + myDataFour.a +' target="_blank">Read more on Wikipedia</a>');
-
-
-		
-	} // end sucess: function(data)
-
+	// error function in case of error
+	error: function(data) {
+		$('#content').html('<h1> ERROR</h1>');
+	}
 }); // end ajax request
-
-
-
 
 
 
