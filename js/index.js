@@ -1,3 +1,12 @@
+// calling the funcion when the 'enter' key is pressed
+$("#input").keypress(function(event) {
+    if (event.which == 13) {
+        search();
+        //alert("it's working");
+     }
+});
+
+
 function search() {
 
 //getting user search word
@@ -17,7 +26,7 @@ $.ajax({
 		var html = "";
 		// Looping through the array and then displaying data
 		for(i=0; i < data[1].length; i++){
-		html += "<a href="+data[3][i]+" target='_blank'>"+ data[1][i]+"</br>"+ data[2][i]+"<br><br></a>";
+		html += "<a href="+data[3][i]+" target='_blank' id='pulled'>"+ '<h2>' + data[1][i] + '</h2>' +"</br>"+ data[2][i]+"<br> <hr> <br></a>";
 		}
 		$('#content').html(html);
 	}, 
@@ -34,8 +43,10 @@ $.ajax({
 
 
 
-
-
+// hover on search icon
+$('#btn').hover(function() {
+	$(this).toggleClass("orange");
+});
 
 
 

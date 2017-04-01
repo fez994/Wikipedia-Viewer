@@ -1,0 +1,71 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #16425B !important; }
+
+h1 {
+  color: #D9DCD6 !important;
+  letter-spacing: 3px;
+  font-family: "Abel", sans-serif !important;
+  font-size: 500% !important;
+  text-transform: uppercase; }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 300% !important;
+  letter-spacing: 2px; }
+
+a {
+  color: #D9DCD6 !important;
+  font-family: "Abel", sans-serif; }
+
+input[type=button] {
+  background-color: #16425B !important;
+  border: none;
+  color: #D9DCD6;
+  font-family: FontAwesome;
+  padding-left: 3%;
+  font-size: 150%;
+  outline: none; }
+
+input[type=text] {
+  width: 30%;
+  font-family: "Abel", sans-serif;
+  text-transform: uppercase; }
+
+i {
+  color: #D9DCD6; }
+
+hr {
+  width: 60%; }
+
+h2 {
+  font-family: "Abel", sans-serif;
+  letter-spacing: 2px; }
+
+a:hover {
+  text-decoration: none !important;
+  color: #FF4500 !important; }
+
+a, a:active, a:visited, a:focus {
+  text-decoration: none !important; }
+
+.container {
+  text-align: center; }
+
+.orange {
+  color: #FF4500 !important; }
+
+#spaceMe {
+  padding-top: 5%; }
+
+#underTitle {
+  width: 40%; }
+
+#random {
+  text-transform: uppercase; }
+
+.hover {
+  font-size: 600%; }
+
+/*# sourceMappingURL=style.css.map */
