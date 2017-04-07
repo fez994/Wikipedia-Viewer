@@ -31,4 +31,4 @@ Skills :
 
 
 
-Html, CSS, SASS, Javascript, Jquery
+Html, CSS, SASS, Javascript, jQuery
